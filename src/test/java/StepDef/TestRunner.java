@@ -13,8 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 			plugin = {"pretty","html:target/cucumber-html", "json:target/cucumber.json"},
 			features = "src/test/java/features",
 			tags= {"@LoginFeature, @ProductSelection"},
-				//	tags= {"@DataTable"},
-			glue = {"StepDef"} // only tags and glue needs to be specified with curly braces
+			glue = {"StepDef"} 
 			)
 	public class TestRunner{
 

@@ -53,16 +53,25 @@ public class ProductDefinition {
 	  @When("^User selects the product$")
 	    public void user_selects_the_product(DataTable table) throws Throwable {
 		  
-		  String Product1 = table.cell(1, 1);
+		/*  String Product1 = table.cell(1, 1);
 		  String Product2 = table.cell(2, 1);
-	    	String Product3 = table.cell(3, 1);
+		  String Product3 = table.cell(3, 1);
 		  
-		  WebElement buttonProductSelect = driver.findElement(By.xpath("//*[text()= '" + Product1 + "']//following::button[1]"));
-			buttonProductSelect.click();
+		     WebElement buttonProductSelect = driver.findElement(By.xpath("//*[text()= '" + Product1 + "']//following::button[1]"));
+			 buttonProductSelect.click();
 			 WebElement buttonProductSelect1 = driver.findElement(By.xpath("//*[text()= '" + Product2 + "']//following::button[1]"));
 			 buttonProductSelect1.click();
-				 WebElement buttonProductSelect2 = driver.findElement(By.xpath("//*[text()= '" + Product3 + "']//following::button[1]"));
-				 buttonProductSelect2.click();
+			 WebElement buttonProductSelect2 = driver.findElement(By.xpath("//*[text()= '" + Product3 + "']//following::button[1]"));
+			 buttonProductSelect2.click(); */
+		  
+		  
+		  for(int i=1;i<table.cells().size();i++)
+			  
+		  {
+			  String Product = table.cell(i, 1);
+			  WebElement buttonProductSelect = driver.findElement(By.xpath("//*[text()= '" + Product + "']//following::button[1]"));
+			  buttonProductSelect.click();  
+			  }
 	    }
 	  
 	

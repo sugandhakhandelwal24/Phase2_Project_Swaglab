@@ -16,7 +16,7 @@ public class BaseClass {
 	{
 		 System.setProperty("webdriver.chrome.driver", "chromedriver");
 		 driver = new ChromeDriver();
-		// driver.get("https://www.saucedemo.com/");
+		
 	}
 	@After
 	public void teardown()
